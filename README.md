@@ -1,6 +1,4 @@
-Here's a comprehensive `README.md` file for your E-Health System project:
-
-```markdown
+markdown
 # 🏥 E-Health System
 
 A comprehensive electronic health record system with biometric fingerprint authentication, role-based access control, and real-time patient management capabilities.
@@ -430,13 +428,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For issues and questions:
-- GitHub Issues: [github.com/yourusername/ehealth-system/issues](https://github.com/yourusername/ehealth-system/issues)
+- GitHub Issues: [github.com/yourusername/ehealth-system/issues](https://github.com/robo-paul/ehealth-system/issues)
 - Email: support@ehealth-system.com
 - Documentation: [docs.ehealth-system.com](https://docs.ehealth-system.com)
 
 ---
 
 **Built with ❤️ for better healthcare management**
-```
-
-This README provides comprehensive documentation for your E-Health System, including setup instructions, API documentation, troubleshooting guides, and feature overviews. Customize the repository URLs, email addresses, and any other placeholders as needed! 🚀
