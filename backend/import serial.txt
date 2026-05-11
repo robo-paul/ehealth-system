@@ -1,0 +1,48 @@
+import serial
+
+# --- CONFIGURATION ---
+SERIAL_PORT = 'COM3'  # Change to your TTL adapter's port (e.g., '/dev/ttyUSB0' on Linux)
+BAUD_RATE = 57600
+BLINK_THRESHOLD = 100  # ADJUST THIS: 0-255 (Higher = less sensitive)
+
+def parse_tgam():
+    try:
+        ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+        print(f"Connected to {SERIAL_PORT}. Listening for blinks (Threshold: {BLINK_THRESHOLD})...")
+        
+        while True:
+            # 1. Sync: Look for two 0xAA bytes that start a packet
+            if ser.read(1) == b'\xaa':
+                if ser.read(1) == b'\xaa':
+                    # 2. Get Payload Length
+                    p_length = ord(ser.read(1))
+                    if p_length > 169: continue
+                    
+                    # 3. Read Payload and Checksum
+                    payload = ser.read(p_length)
+                    checksum = ord(ser.read(1))
+                    
+                    # 4. Parse for Blink Strength (Code 0x16)
+                    i = 0
+                    while i < len(payload):
+                        code = payload[i]
+                        if code == 0x16:  # Blink Strength Code
+                            strength = payload[i+1]
+                            if strength > BLINK_THRESHOLD:
+                                print(f"BLINK DETECTED! Strength: {strength}")
+                            i += 2
+                        elif code >= 0x80: # Multi-byte codes
+                            v_length = payload[i+1]
+                            i += v_length + 2
+                        else: # Single-byte codes (Attention, Meditation, etc.)
+                            i += 2
+                            
+    except serial.SerialException as e:
+        print(f"Error: {e}")
+    except KeyboardInterrupt:
+        print("\nStopping...")
+    finally:
+        if 'ser' in locals(): ser.close()
+
+if __name__ == "__main__":
+    parse_tgam()

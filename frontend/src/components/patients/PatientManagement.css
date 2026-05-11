@@ -1,0 +1,191 @@
+/* src/components/patients/PatientManagement.css */
+.patient-management {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.management-header h2 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.patients-table-container {
+    overflow-x: auto;
+}
+
+.patients-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patients-table th,
+.patients-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.patients-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.patients-table td {
+    color: #34495e;
+}
+
+.patients-table tr:hover {
+    background: #f8f9fa;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.admitted {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.patient-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 0.3rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn.admit {
+    background: #27ae60;
+    color: white;
+}
+
+.action-btn.admit:hover {
+    background: #219a52;
+}
+
+.action-btn.discharge {
+    background: #e74c3c;
+    color: white;
+}
+
+.action-btn.discharge:hover {
+    background: #c0392b;
+}
+
+.action-btn.prescribe {
+    background: #3498db;
+    color: white;
+}
+
+.action-btn.prescribe:hover {
+    background: #2980b9;
+}
+
+.action-btn.diagnostic {
+    background: #9b59b6;
+    color: white;
+}
+
+.action-btn.diagnostic:hover {
+    background: #8e44ad;
+}
+
+
+.role-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.role-patient {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.role-doctor {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.role-nurse {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.role-receptionist {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.role-master_admin {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-badge.verified {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.status-badge.pending {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-badge.active {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-badge.admitted {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.action-btn.role {
+    background: #9c27b0;
+    color: white;
+}
+
+.action-btn.role:hover {
+    background: #7b1fa2;
+}

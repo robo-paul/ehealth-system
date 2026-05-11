@@ -1,0 +1,100 @@
+/* frontend/src/components/patients/PatientList.css */
+.patient-list {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-search {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.patients-table-container {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+.patients-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.patients-table th {
+    text-align: left;
+    padding: 12px;
+    background: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.patients-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.patients-table tr:hover {
+    background: #f9fafb;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-badge.approved {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.patient-stats {
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-align: right;
+}
+
+.patients-loading, .patients-empty {
+    text-align: center;
+    padding: 40px;
+    color: #6b7280;
+}
+
+@media (max-width: 768px) {
+    .patients-table th,
+    .patients-table td {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+    
+    .patient-list {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,225 @@
+/* src/pages/FAQPage.css */
+.faq-page {
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+/* Hero Section */
+.faq-hero {
+    position: relative;
+    background: linear-gradient(135deg, #1a472a 0%, #0e2a1a 100%);
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x bottom;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.95);
+}
+
+/* FAQ Container */
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* FAQ Categories */
+.faq-category {
+    margin-bottom: 3rem;
+}
+
+.faq-category h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #27ae60;
+    display: inline-block;
+}
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    border-color: #27ae60;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f9f0;
+    border-radius: 50%;
+}
+
+.faq-question h3 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
+    font-weight: 500;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem 3.5rem;
+    border-top: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.faq-answer p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Footer */
+.faq-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+}
+
+.faq-footer h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.faq-footer p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.faq-footer-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .faq-container {
+        padding: 2rem 1rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 0.9rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1rem 1rem 3rem;
+    }
+    
+    .faq-footer {
+        padding: 2rem 1rem;
+    }
+    
+    .faq-footer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}

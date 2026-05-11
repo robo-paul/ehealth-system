@@ -1,0 +1,186 @@
+/* src/components/health-records/FileAttachment.css */
+.file-attachment {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.attachment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.attachment-header h4 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #2980b9;
+}
+
+.selected-file {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.selected-file span {
+    color: #2c3e50;
+}
+
+.confirm-upload {
+    padding: 0.25rem 0.75rem;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.confirm-upload:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cancel-upload {
+    padding: 0.25rem 0.75rem;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.attachments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.attachment-item:hover {
+    background: #e8f5e9;
+}
+
+.attachment-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+}
+
+.attachment-info {
+    flex: 1;
+}
+
+.attachment-name {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.attachment-meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: #7f8c8d;
+}
+
+.attachment-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.download-btn,
+.delete-attachment-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #e0e0e0;
+}
+
+.delete-attachment-btn:hover {
+    background: #fdeaea;
+}
+
+.no-attachments {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .attachment-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .upload-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .selected-file {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .attachment-item {
+        flex-wrap: wrap;
+    }
+    
+    .attachment-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
